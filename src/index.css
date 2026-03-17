@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FFFFF0;
+  --color-sage: #9DC183;
+  --color-gold: #D4AF37;
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap');
+  
+  body {
+    @apply bg-ivory text-gray-800 font-sans antialiased overflow-hidden select-none touch-none;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl;
+  }
+}
