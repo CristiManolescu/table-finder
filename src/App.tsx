@@ -5,11 +5,13 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FloorPlan from './components/FloorPlan';
 import TableModal from './components/TableModal';
+import MenuModal from './components/MenuModal';
 import { tablesData } from './data';
 import type { TableData } from './data';
 
 function App() {
   const [selectedTable, setSelectedTable] = useState<TableData | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
 
   const handleSelectGuest = (tableId: number | 'prezidiu') => {
@@ -49,7 +51,7 @@ function App() {
 
   return (
     <div className="w-full h-screen overflow-hidden flex flex-col pt-20 bg-[#FFFFF0]">
-      <Header />
+      <Header onMenuClick={() => setIsMenuOpen(true)} />
 
       <div className="w-full bg-[#FFFFF0]/95 backdrop-blur-md z-30 relative pt-2 pb-2 sm:pt-4 sm:pb-6 flex-shrink-0">
         <div className="flex flex-col items-center gap-2 sm:gap-3 w-full max-w-2xl mx-auto px-2 sm:px-4">
@@ -84,6 +86,11 @@ function App() {
       <TableModal
         table={selectedTable}
         onClose={handleCloseModal}
+      />
+      
+      <MenuModal
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
       />
     </div>
   );
