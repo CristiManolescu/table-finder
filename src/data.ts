@@ -6,7 +6,7 @@ export interface TableData {
 
 export const bridalTableData: TableData = {
   id: 'prezidiu',
-  position: { x: 500, y: 120 }, // Center top
+  position: { x: 500, y: 920 }, // Bottom center, where the exit was
   guests: [
     'Cristina & Cristian Manolescu (Miri)',
     'Denise & Alexandru Constantin (Nași)'

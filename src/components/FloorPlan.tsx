@@ -23,19 +23,19 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
             </text>
 
 
-            {/* Bridal Table (Masa de prezidiu) */}
-            <rect x="300" y="80" width="400" height="80" fill="#FFFFF0" stroke="#D4AF37" strokeWidth="3" rx="40" className="drop-shadow-md" />
-            <text x="500" y="127" textAnchor="middle" fill="#2C352D" className="font-serif text-2xl font-bold">
-              Masa de prezidiu
+            {/* Stage (Scenă) */}
+            <rect x="300" y="80" width="400" height="100" fill="#EADCD3" stroke="#D4AF37" strokeWidth="3" rx="10" className="drop-shadow-md opacity-80" />
+            <text x="500" y="137" textAnchor="middle" fill="#2C352D" className="font-serif text-3xl font-bold">
+              Scenă
             </text>
 
-            {/* Exit Door */}
-            <path d="M 400 950 L 600 950" stroke="#2C352D" strokeWidth="8" strokeLinecap="round" className="opacity-50" />
-            <g transform="translate(476, 880)" className="opacity-60 text-gray-800">
+            {/* Exit/Entrance Door */}
+            <path d="M 850 50 L 950 50" stroke="#2C352D" strokeWidth="8" strokeLinecap="round" className="opacity-50" />
+            <g transform="translate(876, 60)" className="opacity-60 text-gray-800">
               <DoorOpen size={48} stroke="#2C352D" strokeWidth={1.5} />
             </g>
-            <text x="500" y="980" textAnchor="middle" fill="#2C352D" className="font-sans text-sm font-semibold tracking-widest uppercase opacity-60">
-              Ieșire
+            <text x="900" y="130" textAnchor="middle" fill="#2C352D" className="font-sans text-sm font-semibold tracking-widest uppercase opacity-60">
+              Ieșire/Intrare
             </text>
 
             {tables.map((table) => {
