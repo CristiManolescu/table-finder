@@ -12,28 +12,42 @@ export const menuData: MenuData = {
   food: [
     {
       name: "Aperitiv",
-      items: ["Mezeluri", "Brânzeturi"]
+      items: [
+        "Cosulet cu salata de cruditati",
+        "Rulada de cascaval cu sunca si mousse de branza cu marar",
+        "Rafaello cu verdeata",
+        "Ardei gras cu mousse de branza fina",
+        "Frigaruie chorizo si salam de Sibiu",
+        "Muschi file",
+        "Chiftelute traditionale",
+        "Salata de vinete coapte",
+        "Icre de crap pe pandispan sarat",
+        "Rulou de castravete si rosii cherry",
+        "Frigaruie masline",
+        "Pui shanhai"
+      ]
     },
     {
       name: "Pește",
-      items: ["Pește cu orez"]
+      items: ["File de Salau in crusta de ierburi aromatice servit cu orez indian si Sos Lemon Butter"]
     },
     {
       name: "Sarmale",
-      items: ["Sarmale cu mămăligă"]
+      items: ["Sărmăluţe în foi de varză pe pat de mămăliguţa, bacon crocant, smântâna naturală şi ardei iute"]
     },
     {
       name: "Friptură",
-      items: ["Pulpă de pui la grătar", "Ceafă de porc la grătar"]
+      items: ["Ceafa de porc si pulpa de pui dezosata la grill cu cartofi gratinati, sos brun si salată de ardei copţi pe plită"]
     }
   ],
   drinks: [
     {
       name: "Wine",
       items: [
-        "Ayo Summer Day (alb - demisec, Cramele Dealu Mare)",
-        "Ayo Summer Sunset (roze - demisec, Cramele Dealu Mare)",
-        "Ayo Summer Night (roșu - demisec, Cramele Dealu Mare)"
+        "Crama Mosia de la Tohani - Vin alb,roze si rosu",
+        "Special Reserve:Feteasca Regala,Rose si Feteasca Neagra",
+        "Crama Recas-Castel Huniade - Vin alb,roze si rosu",
+        "Feteasca Regala, Rose si Feteasca Neagra"
       ]
     },
     {
