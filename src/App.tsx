@@ -22,8 +22,7 @@ function App() {
 
     if (transformComponentRef.current) {
       const x = table.position.x;
-      // Normal tables are drawn with an extra 150px Y offset in FloorPlan.tsx
-      const y = table.id === 'prezidiu' ? table.position.y : table.position.y + 150;
+      const y = table.position.y;
 
       const { setTransform, instance } = transformComponentRef.current;
       const wrapper = instance.wrapperComponent;

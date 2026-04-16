@@ -14,9 +14,13 @@ const SearchBar = ({ onSelectGuest }: SearchBarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const searchTerms = query.toLowerCase().trim().split(/\s+/);
   const filteredGuests = query.trim() === ''
     ? []
-    : allGuests.filter(guest => guest.name.toLowerCase().includes(query.toLowerCase()));
+    : allGuests.filter(guest => {
+        const guestName = guest.name.toLowerCase();
+        return searchTerms.every(term => guestName.includes(term));
+      });
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {

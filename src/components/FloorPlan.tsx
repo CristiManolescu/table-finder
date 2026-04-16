@@ -17,25 +17,25 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
         <div className="relative w-[1000px] h-[1000px] bg-white shadow-2xl mx-auto my-auto rounded-3xl border border-gray-100 flex items-center justify-center">
           
           <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-            <rect x="350" y="240" width="300" height="150" fill="transparent" stroke="#D4AF37" strokeWidth="2" strokeDasharray="10 10" rx="20" />
-            <text x="500" y="320" textAnchor="middle" fill="#D4AF37" className="font-serif text-3xl font-semibold opacity-80">
-              Ring de dans
-            </text>
-
-
-            {/* Stage (Scenă) */}
-            <rect x="300" y="80" width="400" height="100" fill="#EADCD3" stroke="#D4AF37" strokeWidth="3" rx="10" className="drop-shadow-md opacity-80" />
-            <text x="500" y="137" textAnchor="middle" fill="#2C352D" className="font-serif text-3xl font-bold">
-              Scenă
-            </text>
-
-            {/* Exit/Entrance Door */}
-            <path d="M 850 50 L 950 50" stroke="#2C352D" strokeWidth="8" strokeLinecap="round" className="opacity-50" />
-            <g transform="translate(876, 60)" className="opacity-60 text-gray-800">
+            {/* Intrare / Ieșire */}
+            <path d="M 80 880 L 180 880" stroke="#2C352D" strokeWidth="6" strokeLinecap="round" className="opacity-50" />
+            <g transform="translate(106, 820)" className="opacity-60 text-gray-800">
               <DoorOpen size={48} stroke="#2C352D" strokeWidth={1.5} />
             </g>
-            <text x="900" y="130" textAnchor="middle" fill="#2C352D" className="font-sans text-sm font-semibold tracking-widest uppercase opacity-60">
-              Ieșire/Intrare
+            <text x="130" y="905" textAnchor="middle" fill="#2C352D" className="font-sans text-xs font-bold tracking-widest uppercase opacity-60">
+              Intrare/Ieșire
+            </text>
+
+            {/* Band */}
+            <path d="M 250 880 Q 500 960 750 880" fill="transparent" stroke="#2C352D" strokeWidth="2" className="opacity-80" />
+            <text x="500" y="910" textAnchor="middle" fill="#2C352D" className="font-serif text-3xl font-bold uppercase tracking-[0.2em] opacity-80">
+              Band
+            </text>
+
+            {/* Foto Video */}
+            <rect x="740" y="830" width="90" height="50" fill="#EADCD3" stroke="#D4AF37" strokeWidth="2" rx="8" className="opacity-80" />
+            <text x="785" y="860" textAnchor="middle" fill="#2C352D" className="font-serif text-sm font-bold opacity-80">
+              Foto/Video
             </text>
 
             {tables.map((table) => {
@@ -86,7 +86,7 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
 
               // Normal round tables
               const r = 50;
-              const ty = table.position.y + 150; // Shifted all normal tables down by 150px
+              const ty = table.position.y;
               
               return (
                 <g 

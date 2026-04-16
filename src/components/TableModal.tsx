@@ -48,7 +48,7 @@ const TableModal = ({ table, onClose }: TableModalProps) => {
                 onPointerDown={(e) => e.stopPropagation()} 
               >
                 <ul className="space-y-0.5">
-                  {(table.id === 'prezidiu' ? table.guests : table.guests.slice().sort((a,b) => a.localeCompare(b))).map((guest, idx) => (
+                  {table.guests.map((guest, idx) => (
                     <li key={idx} className="flex flex-col">
                       <div className="py-2">
                         <span className="font-sans text-gray-700 font-medium text-sm sm:text-base leading-tight">
