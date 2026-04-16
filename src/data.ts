@@ -37,7 +37,7 @@ export const tablesData: TableData[] = [
   },
   {
     id: 5,
-    position: { x: 800, y: 150 },
+    position: { x: 850, y: 130 },
     guests: ['Mihai Sandu', 'Alexandra Patrascioiu', 'Alexandra Neacsu', 'Samuel Nitu', 'Cosmin Maga', 'Andreea Moghioroiu', 'Bogdan Moghioroiu', 'Alexandru Negoita', 'Elena Costin', 'Luiza Gogu', 'Marian Gogu']
   },
   {

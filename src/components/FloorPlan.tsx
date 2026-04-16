@@ -15,7 +15,7 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
     <div className="w-full h-full bg-ivory/50 flex items-center justify-center overflow-hidden">
       <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
         <div className="relative w-[1000px] h-[1000px] bg-white shadow-2xl mx-auto my-auto rounded-3xl border border-gray-100 flex items-center justify-center">
-          
+
           <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
             {/* Intrare / Ieșire */}
             <path d="M 80 880 L 180 880" stroke="#2C352D" strokeWidth="6" strokeLinecap="round" className="opacity-50" />
@@ -40,21 +40,21 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
 
             {tables.map((table) => {
               const isSelected = selectedTableId === table.id;
-              
+
               if (table.id === 'prezidiu') {
                 return (
-                  <g 
-                    key={table.id} 
+                  <g
+                    key={table.id}
                     transform={`translate(${table.position.x}, ${table.position.y})`}
                     onClick={() => onTableClick(table)}
                     className="cursor-pointer group"
                   >
-                    <motion.rect 
-                      x="-200" 
-                      y="-40" 
-                      width="400" 
-                      height="80" 
-                      rx="40"
+                    <motion.rect
+                      x="-250"
+                      y="-50"
+                      width="500"
+                      height="100"
+                      rx="50"
                       fill={isSelected ? "#9DC183" : "#FFFFF0"}
                       stroke={isSelected ? "#2C352D" : "#D4AF37"}
                       strokeWidth={isSelected ? "4" : "3"}
@@ -67,14 +67,14 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
                       )}
                     />
                     {isSelected && (
-                      <rect x="-208" y="-48" width="416" height="96" rx="48" fill="transparent" stroke="#9DC183" strokeWidth="2" strokeOpacity="0.5" className="animate-pulse" />
+                      <rect x="-260" y="-60" width="520" height="120" rx="60" fill="transparent" stroke="#9DC183" strokeWidth="2" strokeOpacity="0.5" className="animate-pulse" />
                     )}
                     <text
                       x="0"
-                      y="8"
+                      y="10"
                       textAnchor="middle"
                       className={clsx(
-                        "font-serif font-bold text-2xl transition-colors select-none",
+                        "font-serif font-bold text-3xl transition-colors select-none",
                         isSelected ? "fill-white" : "fill-gray-800 group-hover:fill-sage"
                       )}
                     >
@@ -85,19 +85,19 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
               }
 
               // Normal round tables
-              const r = 50;
+              const r = 60; // Increased from 50
               const ty = table.position.y;
-              
+
               return (
-                <g 
-                  key={table.id} 
+                <g
+                  key={table.id}
                   transform={`translate(${table.position.x}, ${ty})`}
                   onClick={() => onTableClick(table)}
                   className="cursor-pointer group"
                 >
-                  <motion.circle 
-                    r={r} 
-                    cx="0" 
+                  <motion.circle
+                    r={r}
+                    cx="0"
                     cy="0"
                     fill={isSelected ? "#9DC183" : "#FFFFF0"}
                     stroke={isSelected ? "#2C352D" : "#D4AF37"}
@@ -111,15 +111,15 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
                     )}
                   />
                   {isSelected && (
-                     <circle r={r + 8} cx="0" cy="0" fill="transparent" stroke="#9DC183" strokeWidth="2" strokeOpacity="0.5" className="animate-pulse" />
+                    <circle r={r + 10} cx="0" cy="0" fill="transparent" stroke="#9DC183" strokeWidth="2" strokeOpacity="0.5" className="animate-pulse" />
                   )}
 
                   <text
                     x="0"
-                    y="5"
+                    y="10"
                     textAnchor="middle"
                     className={clsx(
-                      "font-serif font-bold text-2xl transition-colors select-none",
+                      "font-serif font-bold text-5xl transition-colors select-none",
                       isSelected ? "fill-white" : "fill-gray-800 group-hover:fill-sage"
                     )}
                   >
@@ -127,10 +127,10 @@ const FloorPlan = ({ tables, selectedTableId, onTableClick }: FloorPlanProps) =>
                   </text>
                   <text
                     x="0"
-                    y="25"
+                    y="40"
                     textAnchor="middle"
                     className={clsx(
-                      "font-sans text-[10px] font-medium transition-colors select-none",
+                      "font-sans text-sm font-medium transition-colors select-none",
                       isSelected ? "fill-white/80" : "fill-gray-500"
                     )}
                   >
